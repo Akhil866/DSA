@@ -75,22 +75,62 @@
 
 #include <iostream>
 using namespace std;
-int f(int n) {
-    if (n == 0) {
+// int f(int n) {
+//     if (n == 0) {
+//         return 0;
+//     }
+//     return n + f(n - 1);
+// }
+
+// int main (){
+//     int n ;
+//     cout<<" Enter the Number :";
+
+//     cin>> n;
+
+
+
+//    int sum =f(n);
+// cout << sum;
+
+// }
+
+// factorial function 
+
+// void f(int i, int sum)
+// {
+//     if (i < 1){
+//         cout << sum;
+//         return;
+//     }
+    
+//     f(i-1,sum+i);
+// }
+//     int main (){
+//         int n;
+//          cin >> n;
+    
+//          int sum = 0;
+    
+//          f(n , sum);
+//     }
+
+
+//functional 
+
+int f(int n )
+{
+    if(n == 0){
         return 0;
     }
-    return n + f(n - 1);
+    return n + f(n-1);
 }
 
-int main (){
+int main ()
+{
     int n ;
-    cout<<" Enter the Number :";
-
     cin>> n;
 
-
-
-   int sum =f(n);
-cout << sum;
-
+    cout<<f(n)<<endl;
+    return 0;
 }
