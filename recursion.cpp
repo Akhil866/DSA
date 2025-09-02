@@ -175,31 +175,54 @@
 
 
 
+// #include <iostream>
+// using namespace std;
+
+// bool f(int n , string s)
+// {
+//     if (n >= s.size()/2)
+//     {
+//         return true;
+//     }
+//     else if (s[n] != s[s.size() - n - 1])
+//     {
+//         return false;
+//     }
+
+//     else {
+//         return f(n+1 , s);
+//     }
+
+// }
+
+// int main (){
+//     string s = "MADA";
+
+//     cout<<f(0 , s);
+//     return 0;
+
+// }
+
+
+
 #include <iostream>
-using namespace std;
+using namespace std ;
 
-bool f(int n , string s)
+int f (int n)
 {
-    if (n >= s.size()/2)
-    {
-        return true;
-    }
-    else if (s[n] != s[s.size() - n - 1])
-    {
-        return false;
+    if (n <= 1){
+        return n;
     }
 
-    else {
-        return f(n+1 , s);
-    }
-
+    return f(n-1)+f(n-2);
 }
+
 
 int main (){
-    string s = "MADA";
+    int n ;
+    cout<<"Enter the palce to br printed";
 
-    cout<<f(0 , s);
-    return 0;
+    cin>> n;
 
+    cout<<f(n);
 }
-
